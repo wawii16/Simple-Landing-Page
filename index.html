@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <div class="box-navbar">
+                    <div class="logo">
+                        <h1>KelasCore.</h1>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#daftar">Daftar</a></li>
+                        <li><a href="#About">About</a></li>
+                    </ul>
+                    <button class="menu-bar">&#9776;</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="wrapper">
+        <div class="container">
+            <div class="grid-cols-2">
+                <div class="grid-item-1">
+                    <h1 class="main-heading">
+                        Welcome to <span>Kelas Core.</span>
+                        <br />
+                        Belajar Web Programming.
+                    </h1>
+                    <p class="info-text">
+                        Build a beautiful, modern website with flexible components built
+                        from scratch.
+                    </p>
+
+                    <div class="btn_wrapper">
+                        <button class="btn view_more_btn">
+                            view all pages <i class="ri-arrow-right-line"></i>
+                        </button>
+
+                        <button class="btn documentation_btn">documentation</button>
+                    </div>
+                </div>
+                <div class="grid-item-2">
+                    <div class="team_img_wrapper">
+                        <img src="./img/team.svg" alt="team-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script>
+    const menuBar = document.querySelector(".menu-bar");
+    const menuNav = document.querySelector(".menu");
+
+    menuBar.addEventListener("click", () => {
+        menuNav.classList.toggle("menu-active");
+    });
+
+    const navBar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+        console.log(window.scrollY);
+        const windowPosition = window.scrollY > 0;
+        navBar.classList.toggle("scrolling-active", windowPosition);
+        menuNav.classList.remove("menu-active");
+    });
+
+
+</script>
+
+</html>
